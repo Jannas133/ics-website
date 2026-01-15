@@ -38,6 +38,11 @@
           /* Define your solid background color and your gradient */
           background-image: linear-gradient(to right, #1e88e5, red);
         }
+        .text-outline {
+          background: linear-gradient(to right, black, #1e88e5);
+          -webkit-background-clip: text;
+          -webkit-text-stroke: 6px transparent;
+        }
       }
     </style>
     <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css" />
@@ -258,9 +263,36 @@
       </div>
     </nav>
 
+    <svg 
+      width="0" 
+      height="0" 
+      class="absolute"
+    >
+      <linearGradient 
+        id="lucide-gradient" 
+        x1="0" 
+        y1="0" 
+        x2="24" 
+        y2="0"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop 
+          offset="0" 
+          stop-color="#1e88e5" 
+        />
+        <stop 
+          offset="24" 
+          stop-color="red" 
+        />
+      </linearGradient>
+    </svg>
+
     <div
       id="home"
-      class="section-content"
+      class="
+        w-full
+        mx-auto
+        section-content"
     >
       <!-- Hero -->
       <section
@@ -368,30 +400,217 @@
             Why Choose ICS?
           </h2>
           <div
-          
+            class="
+              grid
+              grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))]
+              gap-4
+              mt-8
+              max-w-7xl
+              mx-auto"
           >
             <div
-            
+              class="
+                bg-gray-950
+                p-8
+                rounded-[10px]
+                border-2
+                border-gray-800
+                transition
+                duration-300
+                flex
+                flex-col
+                justify-center
+                hover:-translate-y-[5px]
+                hover:border-primary"
             >
-              <h3></h3>
-              <p></p>
+              <h3
+                class="
+                  text-2xl
+                  font-bold
+                  text-center
+                  text-primary
+                  pb-2"
+              >
+                Industry Expertise
+              </h3>
+              <div
+                class="
+                  aspect-square
+                  w-full
+                  px-8"
+              >
+                <span
+                  data-lucide="factory"
+                  class="
+                    h-full
+                    w-full
+                    stroke-[2px]
+                    stroke-[url(#lucide-gradient)]"
+                ></span>
+              </div>
+              <p
+                class="
+                  text-xl
+                  text-center
+                  px-2
+                  text-gray-300"
+              >
+                Serving Food & Beverage, Mining, Refractories, Manufacturing, 
+                and Petro Chemical Industries since 1995 
+              </p>
             </div>
             <div
-            
+              class="
+                bg-gray-950
+                p-8
+                rounded-[10px]
+                border-2
+                border-gray-800
+                transition
+                duration-300
+                flex
+                flex-col
+                justify-center
+                hover:-translate-y-[5px]
+                hover:border-primary"
             >
-              <h3></h3>
-              <p></p>
+              <h3
+                class="
+                  text-2xl
+                  font-bold
+                  text-center
+                  text-primary
+                  pb-2"
+              >
+                Comprehensive Solutions
+              </h3>
+              <div
+                class="
+                  aspect-square
+                  w-full
+                  px-8"
+              >
+                <span
+                  data-lucide="wrench"
+                  class="
+                    h-full
+                    w-full
+                    stroke-[2px]
+                    stroke-[url(#lucide-gradient)]"
+                ></span>
+              </div>
+              <p
+                class="
+                  text-xl
+                  text-center
+                  px-2
+                  text-gray-300"
+              >
+                Turnkey projects, maintenance contracts, design, installation,
+                integration, and reporting solutions
+              </p>
             </div>
             <div
-            
+              class="
+                bg-gray-950
+                p-8
+                rounded-[10px]
+                border-2
+                border-gray-800
+                transition
+                duration-300
+                flex
+                flex-col
+                justify-center
+                hover:-translate-y-[5px]
+                hover:border-primary"
             >
-              <h3></h3>
-              <p></p>
+              <h3
+                class="
+                  text-2xl
+                  font-bold
+                  text-center
+                  text-primary
+                  pb-2"
+              >
+                Long-term Partnerships
+              </h3>
+              <div
+                class="
+                  aspect-square
+                  w-full
+                  px-8"
+              >
+                <span
+                  data-lucide="handshake"
+                  class="
+                    h-full
+                    w-full
+                    stroke-[2px]
+                    stroke-[url(#lucide-gradient)]"
+                ></span>
+              </div>
+              <p
+                class="
+                  text-xl
+                  text-center
+                  px-2
+                  text-gray-300"
+              >
+                Small client base with longstanding relationships built on trust
+                and excellence
+              </p>
             </div>
             <div
+              class="
+                bg-gray-950
+                p-8
+                rounded-[10px]
+                border-2
+                border-gray-800
+                transition
+                duration-300
+                flex
+                flex-col
+                justify-center
+                hover:-translate-y-[5px]
+                hover:border-primary"
             >
-              <h3></h3>
-              <p></p>
+              <h3
+                class="
+                  text-2xl
+                  font-bold
+                  text-center
+                  text-primary
+                  pb-2"
+              >
+                IoT Innovation
+              </h3>
+              <div
+                class="
+                  aspect-square
+                  w-full
+                  px-8"
+              >
+                <span
+                  data-lucide="radio"
+                  class="
+                    h-full
+                    w-full
+                    stroke-[2px]
+                    stroke-[url(#lucide-gradient)]"
+                ></span>
+              </div>
+              <p
+                class="
+                  text-xl
+                  text-center
+                  px-2
+                  text-gray-300"
+              >
+                Bridging the gap between Industrial IT and Corporate IT with 
+                affordable, scalable IoT solutions
+              </p>
             </div>
           </div>
         </section>
@@ -405,32 +624,247 @@
             shadow-xl/30
             text-gray-300
             py-24
-            relative
-            overflow-hidden"
+            mb-16"
         >
-          <div>
-            <h2>
-
-            </h2>
-            <div>
-              <div>
-                <div></div>
-                <h4></h4>
-                <p></p>
+          <h2
+            class="
+              text-4xl
+              md:text-5xl
+              font-bold
+              mb-6
+              pb-2
+              text-outline
+              text-center
+              text-gray-950
+              mx-auto
+              "
+          >
+            ICS Cloud Platform - IoT for Everyone
+          </h2>
+            <div
+              class="
+                grid
+                grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))]
+                gap-4
+                max-w-7xl
+                mx-auto"
+            >
+              <div
+                class="
+                  bg-gray-800
+                  p-4
+                  rounded-[10px]
+                  border-2
+                  border-gray-600
+                  text-center"
+              >
+                <div
+                  class="
+                    aspect-square
+                    w-[60%]
+                    mx-auto"
+                >
+                  <span
+                    data-lucide="microchip"
+                    class="
+                      h-full
+                      w-full
+                      stroke-[2px]
+                      stroke-[url(#lucide-gradient)]"
+                  ></span>
+                </div>
+                <h4
+                  class="
+                    pt-4
+                    text-xl
+                    font-bold
+                    text-primary"
+                >
+                  Embedded
+                </h4>
+                <p
+                  class="
+                    pt-4
+                    font-semibold
+                    text-gray-300"
+                >
+                  Small footprint smart sensors and collection devices
+                </p>
               </div>
-              <div>
-                <div></div>
-                <h4></h4>
-                <p></p>
+              <div
+                class="
+                  bg-gray-800
+                  p-8
+                  rounded-[10px]
+                  border-2
+                  border-gray-600
+                  text-center"
+              >
+                <div
+                  class="
+                    aspect-square
+                    w-[60%]
+                    mx-auto"
+                >
+                  <span
+                    data-lucide="chart-no-axes-combined"
+                    class="
+                      h-full
+                      w-full
+                      stroke-[2px]
+                      stroke-[url(#lucide-gradient)]"
+                  ></span>
+                </div>
+                <h4
+                  class="
+                    pt-4
+                    text-xl
+                    font-bold
+                    text-primary"
+                >
+                  Situational Awareness
+                </h4>
+                <p
+                  class="
+                    pt-4
+                    font-semibold
+                    text-gray-300"
+                >
+                  Real-time production data via web, mobile, or messaging
+                </p>
               </div>
-              <div>
-                <div></div>
-                <h4></h4>
-                <p></p>
+              <div
+                class="
+                  bg-gray-800
+                  p-8
+                  rounded-[10px]
+                  border-2
+                  border-gray-600
+                  text-center"
+              >
+                <div
+                  class="
+                    aspect-square
+                    w-[60%]
+                    mx-auto"
+                >
+                  <span
+                    data-lucide="bot"
+                    class="
+                      h-full
+                      w-full
+                      stroke-[2px]
+                      stroke-[url(#lucide-gradient)]"
+                  ></span>
+                </div>
+                <h4
+                  class="
+                    pt-4
+                    text-xl
+                    font-bold
+                    text-primary"
+                >
+                  Automated
+                </h4>
+                <p
+                  class="
+                    pt-4
+                    font-semibold
+                    text-gray-300"
+                >
+                  One version of truth uploaded automatically
+                </p>
+              </div>
+              <div
+                class="
+                  bg-gray-800
+                  p-8
+                  rounded-[10px]
+                  border-2
+                  border-gray-600
+                  text-center"
+              >
+                <div
+                  class="
+                    aspect-square
+                    w-[60%]
+                    mx-auto"
+                >
+                  <span
+                    data-lucide="users"
+                    class="
+                      h-full
+                      w-full
+                      stroke-[2px]
+                      stroke-[url(#lucide-gradient)]"
+                  ></span>
+                </div>
+                <h4
+                  class="
+                    pt-4
+                    text-xl
+                    font-bold
+                    text-primary"
+                >
+                  Team Building
+                </h4>
+                <p
+                  class="
+                    pt-4
+                    font-semibold
+                    text-gray-300"
+                >
+                  Broadcast statistics and achievements
+                </p>
+              </div>
+              <div
+                class="
+                  bg-gray-800
+                  p-8
+                  rounded-[10px]
+                  border-2
+                  border-gray-600
+                  text-center"
+              >
+                <div
+                  class="
+                    aspect-square
+                    w-[60%]
+                    mx-auto"
+                >
+                  <span
+                    data-lucide="chevrons-left-right-ellipsis"
+                    class="
+                      h-full
+                      w-full
+                      stroke-[2px]
+                      stroke-[url(#lucide-gradient)]"
+                  ></span>
+                </div>
+                <h4
+                  class="
+                    pt-4
+                    text-xl
+                    font-bold
+                    text-primary"
+                >
+                  BIG DATA
+                </h4>
+                <p
+                  class="
+                    pt-4
+                    font-semibold
+                    text-gray-300"
+                >
+                  Converged data analysis and AI learning basis
+                </p>
               </div>
             </div>
-          </div>
         </section>
+        <section
+          class="
+            h-1"
+        ></section>
       </div>
     </div>
 
@@ -505,30 +939,6 @@
             </p>
           </section>
 
-          <svg 
-            width="0" 
-            height="0" 
-            class="absolute"
-          >
-            <linearGradient 
-              id="lucide-gradient" 
-              x1="0" 
-              y1="0" 
-              x2="24" 
-              y2="0"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop 
-                offset="0" 
-                stop-color="#1e88e5" 
-              />
-              <stop 
-                offset="24" 
-                stop-color="red" 
-              />
-            </linearGradient>
-          </svg>
-
           <section
             class="
               m-6
@@ -581,7 +991,6 @@
                       m-auto
                       h-[250px]
                       w-[200px]
-                      text-primary
                       stroke-[3px]
                       z-1
                       absolute
@@ -2519,7 +2928,7 @@
                     h-6
                     group-hover:block"
                 >
-                Comprehensive Coverage Hello Git
+                Comprehensive Coverage
               </li>
             </ul>
           </div>

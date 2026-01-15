@@ -5,12 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .gradient-shadow-text {
+        position: relative; /* Container for absolute positioning */
+        font-size: 72px;
+        font-weight: bold;
+        /* Add other desired font styles here */
+      }
+
+      /* The actual text with the gradient background */
+      .gradient-shadow-text {
+        background: linear-gradient(to right, #ff0000, #0000ff); /* Your gradient colors */
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent; /* Makes the main text invisible to reveal the background */
+        position: relative;
+        z-index: 1; /* Ensures the gradient text is on top */
+      }
+
+      /* The pseudo-element used for the shadow */
+      .gradient-shadow-text::before {
+        content: attr(data-text); /* Pulls text from the data-text attribute */
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1; /* Positions the shadow behind the main text */
+        color: transparent; /* Makes the pseudo-element text invisible */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), /* Add desired shadow effects here */
+                    4px 4px 6px rgba(0, 0, 0, 0.8);
+      }
+    </style>
        <!-- jQuery from CDN -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
     <div id="nav-placeholder"></div>
-    <p>hello</p>
+    <p class="gradient-shadow-text">hello world edfc gfghfg ghff </p>
 
 <!-- Load the navbar -->
 <script>
