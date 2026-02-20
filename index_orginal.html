@@ -60,7 +60,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="relative">
+<body class="
+  relative
+  max-h-screen"
+>
   <div
     class="
       fixed
@@ -76,7 +79,10 @@
     bg-black/20
     -z-10"
   ></div>
-  <main class="relative z-10">
+  <main class="
+    relative
+    z-10"
+  >
     <!-- Navigation -->
     <nav class="
       bg-gray-950/10
@@ -243,7 +249,6 @@
               items-center"
           >
             <button 
-              id="mobile-menu-button"
               class="mobile-menu-button"
             >
               <svg 
@@ -268,106 +273,6 @@
       </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div 
-      id="mobile-menu" 
-      class="
-        hidden 
-        md:hidden 
-        fixed 
-        inset-x-0 
-        top-16 
-        z-50 
-        bg-gray-950/95 
-        backdrop-blur-lg 
-        border-t 
-        border-gray-800 
-        overflow-y-auto"
-    >
-      <div 
-        class="
-          px-6 
-          py-8 
-          flex 
-          flex-col 
-          space-y-6 
-          text-lg 
-          font-medium 
-          text-gray-300"
-      >
-        <a 
-          href="#home" 
-          onclick="showSection('home'); closeMobileMenu()" 
-          class="
-            py-4 
-            border-b 
-            border-gray-700 
-            hover:text-accent"
-        >
-          Home
-        </a>
-        <a 
-          href="#about" 
-          onclick="showSection('about'); closeMobileMenu()" 
-          class="
-            py-4 
-            border-b 
-            border-gray-700 
-            hover:text-accent"
-        >
-          About
-        </a>
-        <a 
-          href="#services" 
-          onclick="showSection('services'); closeMobileMenu()" 
-          class="
-            py-4 
-            border-b 
-            border-gray-700 
-            hover:text-accent"
-        >
-          Services
-        </a>
-        <a 
-          href="#projects" 
-          onclick="showSection('projects'); closeMobileMenu()" 
-          class="
-            py-4 
-            border-b 
-            border-gray-700 
-            hover:text-accent"
-        >
-          Projects
-        </a>
-        <a 
-          href="#maintenance" 
-          onclick="showSection('maintenance'); closeMobileMenu()" 
-          class="
-            py-4 
-            border-b 
-            border-gray-700 
-            hover:text-accent"
-        >
-          Maintenance
-        </a>
-        <a 
-          href="#contact" 
-          onclick="showSection('contact'); closeMobileMenu()" 
-          class="
-            mt-8 
-            bg-primary 
-            text-white 
-            py-4 
-            rounded-md 
-            hover:bg-accent 
-            text-center 
-            font-semibold"
-        >
-          Contact Us
-        </a>
-      </div>
-    </div>
-
     <svg 
       width="0" 
       height="0" 
@@ -387,7 +292,7 @@
         />
         <stop 
           offset="24" 
-          stop-color="green" 
+          stop-color="red" 
         />
       </linearGradient>
     </svg>
@@ -508,14 +413,11 @@
           <div
             class="
               grid
-              grid-cols-1
-              md:grid-cols-2
-              lg:grid-cols-4
+              grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))]
               gap-4
               mt-8
               max-w-7xl
-              mx-auto
-              px-4"
+              mx-auto"
           >
             <div
               class="
@@ -753,13 +655,10 @@
             <div
               class="
                 grid
-                grid-cols-1
-                sm:grid-cols-2
-                lg:grid-cols-5
+                grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))]
                 gap-4
                 max-w-7xl
-                mx-auto
-                px-4"
+                mx-auto"
             >
               <div
                 class="
@@ -992,8 +891,7 @@
             src="./img/iotModel.png" 
             alt="Industries we operate in"
             class="
-              w-full
-              max-w-3xl
+              w-3xl
               object-contain
               mx-auto
               my-6"
@@ -1004,8 +902,7 @@
               bg-gray-800
               p-8
               mx-auto
-              w-full
-              max-w-[300px]
+              w-[300px]
               rounded-[10px]
               border-2
               border-gray-600
@@ -1056,8 +953,7 @@
           class="
             max-w-7xl
             mx-auto
-            mb-12
-            px-4"
+            mb-12"
         >
           <h2
             class="
@@ -1131,17 +1027,12 @@
             <div
               class="
                 flex
-                flex-col
-                lg:flex-row
-                mx-6
-                lg:mx-12
-                gap-8
-                items-center"
+                flex-row
+                mx-12"
             >
               <p 
                 class="
-                  text-5xl
-                  lg:text-7xl
+                  text-7xl
                   flex-1
                   text-center
                   my-auto
@@ -1227,17 +1118,12 @@
             <div
               class="
                 flex
-                flex-col
-                lg:flex-row
-                mx-6
-                lg:mx-12
-                gap-8
-                items-center"
+                flex-row
+                mx-12"
             >
               <p 
                 class="
-                  text-5xl
-                  lg:text-7xl
+                  text-7xl
                   flex-1
                   text-center
                   my-auto
@@ -1356,7 +1242,7 @@
                     alt="Wonderware"
                     class="
                       h-20
-                      sm:h-24
+                      sm:24
                       w-auto"
                   >
                   <img 
@@ -1364,7 +1250,7 @@
                     alt="Phoenix Contact"
                     class="
                       h-20
-                      sm:h-24
+                      sm:24
                       w-auto"
                   >
                   <img 
@@ -1372,7 +1258,7 @@
                     alt="Mustek"
                     class="
                       h-20
-                      sm:h-24
+                      sm:24
                       w-auto"
                   >
 
@@ -1381,7 +1267,7 @@
                     alt="Wonderware"
                     class="
                       h-20
-                      sm:h-24
+                      sm:24
                       w-auto"
                   >
                   <img 
@@ -1389,7 +1275,7 @@
                     alt="Phoenix Contact"
                     class="
                       h-20
-                      sm:h-24
+                      sm:24
                       w-auto"
                   >
                   <img 
@@ -1397,7 +1283,7 @@
                     alt="Mustek"
                     class="
                       h-20
-                      sm:h-24
+                      sm:24
                       w-auto"
                   >
                   <img 
@@ -1405,7 +1291,7 @@
                     alt="Wonderware"
                     class="
                       h-20
-                      sm:h-24
+                      sm:24
                       w-auto"
                   >
                   <img 
@@ -1413,7 +1299,7 @@
                     alt="Phoenix Contact"
                     class="
                       h-20
-                      sm:h-24
+                      sm:24
                       w-auto"
                   >
                   <img 
@@ -1421,7 +1307,7 @@
                     alt="Mustek"
                     class="
                       h-20
-                      sm:h-24
+                      sm:24
                       w-auto"
                   >
                 </div>
@@ -1450,7 +1336,7 @@
                 alt="ECA"
                 class="
                   h-20
-                  sm:h-24
+                  sm:24
                   w-auto
                   mx-auto"
               >
@@ -1490,8 +1376,7 @@
           src="./img/automation workflow.svg" 
           alt="System Integration Diagram"
           class="
-            w-full
-            max-w-3xl
+            w-3xl
             animate-pulse
             duration-100
             mx-auto
@@ -1503,14 +1388,11 @@
             max-w-7xl
             mb-12
             grid
-            grid-cols-1
-            md:grid-cols-2
+            grid-cols-2
             mx-auto
-            px-4
             justify-center
             gap-6"
         >
-          <!-- All 8 service sections remain exactly as you had them -->
           <section
             class="
               m-2
@@ -1532,7 +1414,7 @@
           >
             <h2
               class="
-                text-2xl
+                text-3xl
                 font-bold
                 text-center
                 text-primary
@@ -1543,7 +1425,7 @@
 
             <h2
               class="
-                text-xl
+                text-2xl
                 font-bold
                 text-left
                 mx-4
@@ -1576,7 +1458,7 @@
           >
             <h2
               class="
-                text-2xl
+                text-3xl
                 font-bold
                 text-center
                 text-primary
@@ -1587,7 +1469,7 @@
 
             <h2
               class="
-                text-xl
+                text-2xl
                 font-bold
                 text-left
                 mx-4
@@ -1620,7 +1502,7 @@
           >
             <h2
               class="
-                text-2xl
+                text-3xl
                 font-bold
                 text-center
                 text-primary
@@ -1631,7 +1513,7 @@
 
             <ul
               class="
-                text-xl
+                text-2xl
                 font-bold
                 text-left
                 mx-4
@@ -1684,7 +1566,7 @@
           >
             <h2
               class="
-                text-2xl
+                text-3xl
                 font-bold
                 text-center
                 text-primary
@@ -1695,7 +1577,7 @@
 
             <ul
               class="
-                text-xl
+                text-2xl
                 font-bold
                 text-left
                 mx-4
@@ -1748,7 +1630,7 @@
           >
             <h2
               class="
-                text-2xl
+                text-3xl
                 font-bold
                 text-center
                 text-primary
@@ -1759,7 +1641,7 @@
 
             <ul
               class="
-                text-xl
+                text-2xl
                 font-bold
                 text-left
                 mx-4
@@ -1806,7 +1688,7 @@
           >
             <h2
               class="
-                text-2xl
+                text-3xl
                 font-bold
                 text-center
                 text-primary
@@ -1817,7 +1699,7 @@
 
             <ul
               class="
-                text-xl
+                text-2xl
                 font-bold
                 text-left
                 mx-4
@@ -1864,7 +1746,7 @@
           >
             <h2
               class="
-                text-2xl
+                text-3xl
                 font-bold
                 text-center
                 text-primary
@@ -1875,7 +1757,7 @@
 
             <ul
               class="
-                text-xl
+                text-2xl
                 font-bold
                 text-left
                 mx-4
@@ -1925,7 +1807,7 @@
           >
             <h2
               class="
-                text-2xl
+                text-3xl
                 font-bold
                 text-center
                 text-primary
@@ -1936,7 +1818,7 @@
 
             <ul
               class="
-                text-xl
+                text-2xl
                 font-bold
                 text-left
                 mx-4
@@ -1992,8 +1874,7 @@
           src="./img/industries.png" 
           alt="Industries we operate in"
           class="
-            w-full
-            max-w-3xl
+            w-3xl
             object-contain
             mx-auto
             my-6"
@@ -2010,19 +1891,16 @@
               flex
               flex-row
               flex-wrap
-              mx-4
-              md:mx-10
+              mx-10
               justify-center
               gap-6"
           >
-            <!-- All 12 project cards with responsive width -->
             <section
               class="
                 m-2
                 py-10
                 p-3
-                w-full
-                max-w-[300px]
+                w-[300px]
                 rounded-md
                 border-2
                 border-primary/80
@@ -2060,8 +1938,7 @@
                 m-2
                 py-10
                 p-3
-                w-full
-                max-w-[300px]
+                w-[300px]
                 rounded-md
                 border-2
                 border-primary/80
@@ -2099,8 +1976,7 @@
                 m-2
                 py-10
                 p-3
-                w-full
-                max-w-[300px]
+                w-[300px]
                 rounded-md
                 border-2
                 border-primary/80
@@ -2130,7 +2006,6 @@
                 class="text-gray-300"
               >
                 Batching system for 80 raw material bins and 8 mixers with recipe management
-              </p>
             </section>
 
             <section
@@ -2138,8 +2013,7 @@
                 m-2
                 py-10
                 p-3
-                w-full
-                max-w-[300px]
+                w-[300px]
                 rounded-md
                 border-2
                 border-primary/80
@@ -2177,8 +2051,7 @@
                 m-2
                 py-10
                 p-3
-                w-full
-                max-w-[300px]
+                w-[300px]
                 rounded-md
                 border-2
                 border-primary/80
@@ -2216,8 +2089,7 @@
                 m-2
                 py-10
                 p-3
-                w-full
-                max-w-[300px]
+                w-[300px]
                 rounded-md
                 border-2
                 border-primary/80
@@ -2255,8 +2127,7 @@
                 m-2
                 py-10
                 p-3
-                w-full
-                max-w-[300px]
+                w-[300px]
                 rounded-md
                 border-2
                 border-primary/80
@@ -2294,8 +2165,7 @@
                 m-2
                 py-10
                 p-3
-                w-full
-                max-w-[300px]
+                w-[300px]
                 rounded-md
                 border-2
                 border-primary/80
@@ -2333,8 +2203,7 @@
                 m-2
                 py-10
                 p-3
-                w-full
-                max-w-[300px]
+                w-[300px]
                 rounded-md
                 border-2
                 border-primary/80
@@ -2372,8 +2241,7 @@
                 m-2
                 py-10
                 p-3
-                w-full
-                max-w-[300px]
+                w-[300px]
                 rounded-md
                 border-2
                 border-primary/80
@@ -2411,8 +2279,7 @@
                 m-2
                 py-10
                 p-3
-                w-full
-                max-w-[300px]
+                w-[300px]
                 rounded-md
                 border-2
                 border-primary/80
@@ -2450,8 +2317,7 @@
                 m-2
                 py-10
                 p-3
-                w-full
-                max-w-[300px]
+                w-[300px]
                 rounded-md
                 border-2
                 border-primary/80
@@ -2553,8 +2419,7 @@
           <div
             class="
               grid
-              grid-cols-1
-              md:grid-cols-2
+              grid-cols-2
               mx-6
               justify-center
               gap-6"
@@ -2727,8 +2592,7 @@
           text-center
           mx-0
           my-auto
-          px-4
-          md:px-16
+          px-16
           py-8
           text-gray-300"
       >
@@ -3037,10 +2901,7 @@
       <p
         class="
           mt-0.5
-          text-[#888]
-          hidden
-          md:block
-          lg:block"
+          text-[#888]"
       >
         Industrial Automation & IoT Solutions since 1995
       </p>
@@ -3060,24 +2921,10 @@
         top: 0,
         behavior:"smooth" 
       });
-      closeMobileMenu();
     }
 
-    function closeMobileMenu() {
-      const mobileMenu = document.getElementById('mobile-menu');
-      if (mobileMenu) mobileMenu.classList.add('hidden');
-    }
+    showSection('home');
 
-    // Mobile menu toggle
-    const mobileButton = document.getElementById('mobile-menu-button');
-    const mobileMenuEl = document.getElementById('mobile-menu');
-    if (mobileButton && mobileMenuEl) {
-      mobileButton.addEventListener('click', () => {
-        mobileMenuEl.classList.toggle('hidden');
-      });
-    }
-
-    // Contact form
     document
       .getElementById('contact-form')
       .addEventListener('submit', function(e) {
@@ -3131,8 +2978,6 @@
           btnLoader.classList.add('hidden');
         });
       });
-
-    showSection('home');
   </script>
 </body>
 </html>
